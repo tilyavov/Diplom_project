@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+</head>
+<body>
+    <h1>Профиль пользователя</h1>
+    {% if user_profile %}
+        <p><strong>Имя пользователя:</strong> {{ user_profile.user.username }}</p>
+        <p><strong>Роль:</strong> {{ user_profile.role }}</p>
+        <p><strong>Перекупщик:</strong> {% if user_profile.is_reseller %}Да{% else %}Нет{% endif %}</p>
+    {% else %}
+        <p>Профиль пользователя не найден.</p>
+    {% endif %}
+</body>
+</html>

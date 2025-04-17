@@ -1,16 +1,18 @@
 from django.db import models
 from django.contrib.auth.models import User as DjangoUser
 
+# Модель профиля пользователя
 class UserProfile(models.Model):
+    ROLE_CHOICES = [
+        ('musician', 'Музыкант'),
+        ('label', 'Лейбл'),
+        ('reseller', 'Перекупщик'),
+        ('buyer', 'Покупатель'),
+    ]
     user = models.OneToOneField(DjangoUser, on_delete=models.CASCADE)
     role = models.CharField(
         max_length=20,
-        choices=[
-            ('musician', 'Музыкант'),
-            ('label', 'Лейбл'),
-            ('reseller', 'Перекупщик'),
-            ('buyer', 'Покупатель'),
-        ],
+        choices=ROLE_CHOICES,
         default='buyer'
     )
     is_reseller = models.BooleanField(default=False)
@@ -18,6 +20,11 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+    class Meta:
+        verbose_name = "Профиль пользователя"
+        verbose_name_plural = "Профили пользователей"
+
+# Модель товара
 class Product(models.Model):
     SELLER_TYPE_CHOICES = [
         ('musician', 'Музыкант'),
@@ -35,3 +42,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = "Товар"
+        verbose_name_plural = "Товары"

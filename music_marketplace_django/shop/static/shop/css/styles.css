@@ -1,0 +1,438 @@
+/* styles.css */
+
+/* Базовые стили (могут уже быть в вашем файле) */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px; /* Добавлен отступ для тела страницы */
+    color: #333;
+}
+
+.container {
+    width: 90%; /* Увеличена ширина контейнера */
+    max-width: 960px; /* Максимальная ширина контейнера */
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Усилена тень */
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px; /* Увеличен нижний отступ заголовков */
+}
+
+.btn {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Стили для контейнера страницы регистрации */
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Или 100vh, чтобы занимать всю высоту экрана */
+    background-color: #f8f9fa; /* Светло-серый фон */
+    padding: 20px;
+}
+
+/* Стили для блока формы регистрации */
+.registration-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Задайте желаемую ширину */
+}
+
+.registration-box h1 {
+    color: #343a40; /* Темно-серый заголовок */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Стили для группы полей формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Увеличен отступ метки */
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select,
+.form-group input[type="file"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px; /* Увеличены внутренние отступы полей */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Скруглены углы полей */
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group .alert-danger {
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.form-group .form-text {
+    font-size: 0.9em;
+    color: #6c757d;
+    display: block; /* Чтобы подсказка занимала всю ширину */
+    margin-top: 5px;
+}
+
+/* Стили для кнопки "Зарегистрироваться" */
+.btn-primary {
+    background-color: #007bff; /* Синий цвет кнопки */
+    color: #fff;
+    padding: 15px 25px; /* Увеличены отступы кнопки */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em; /* Увеличен размер шрифта кнопки */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Занимает всю ширину блока */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+}
+
+/* Стили для ссылки "Уже есть аккаунт?" */
+.mt-3.text-center {
+    color: #6c757d; /* Светло-серый текст ссылки */
+    margin-top: 20px;
+    text-align: center;
+}
+
+.mt-3.text-center a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mt-3.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для контейнера страницы входа */
+.login-container {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    min-height: 80vh; /* Или 100vh, чтобы занимать всю высоту экрана */
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Стили для блока формы входа */
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.login-box h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Стили для группы полей формы */
+.login-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+.login-group input[type="text"],
+.login-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login-group .error-message {
+    color: #d9534f;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Стили для кнопки "Войти" */
+.login-box button[type="submit"].btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Занимает всю ширину блока */
+}
+
+.login-box button[type="submit"].btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для ссылки "Еще нет аккаунта?" */
+.signup-link {
+    margin-top: 20px;
+    color: #777;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для контейнера изображения профиля в навигации */
+.navbar .profile-image-container {
+    width: 30px; /* Задайте желаемый размер ширины */
+    height: 30px; /* Задайте желаемый размер высоты */
+    border-radius: 50%; /* Делает контейнер круглым */
+    overflow: hidden; /* Скрывает части изображения, выходящие за круг */
+    margin-right: 5px; /* Добавьте небольшой отступ справа от изображения */
+    display: inline-block; /* Размещает контейнер в одну строку с именем */
+    vertical-align: middle; /* Выравнивает по вертикали с именем */
+}
+
+/* Стили для самого изображения профиля */
+.navbar .profile-image {
+    width: 100%; /* Занимает всю ширину контейнера */
+    height: 100%; /* Занимает всю высоту контейнера */
+    object-fit: cover; /* Масштабирует изображение, сохраняя пропорции и обрезая лишнее */
+}
+
+/* Стили для имени пользователя рядом с изображением */
+.navbar .username {
+    font-weight: bold;
+    font-size: 0.9rem; /* Задайте желаемый размер шрифта */
+    display: inline-block; /* Размещает имя в одну строку с изображением */
+    vertical-align: middle; /* Выравнивает по вертикали с изображением */
+}
+
+/* Стили для элемента user-menu */
+.navbar .user-menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative; /* Важно для позиционирования выпадающего меню */
+}
+
+/* Стили для выпадающего меню пользователя */
+.navbar .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: auto !important; /* Попробуйте этот вариант первым */
+    right: 0 !important;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    display: none; /* Скрыто по умолчанию */
+    z-index: 1000;
+    min-width: 150px !important; /* Или width: 150px !important; */
+    text-align: left;
+}
+
+.navbar .dropdown-item a,
+.navbar .dropdown-item button {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    background: none;
+    border: none;
+    width: 100%; /* Занимает всю ширину выпадающего меню */
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.navbar .dropdown-item a:hover,
+.navbar .dropdown-item button:hover {
+    background-color: #eee;
+}
+
+.navbar .dropdown-item form {
+    margin-bottom: 0;
+}
+
+.navbar .dropdown-item button[type="submit"] {
+    text-align: left;
+}
+
+/* Стили для страницы "Добавить товар" */
+.add-product-container {
+    background-color: #f8f9fa; /* Светло-серый фон контейнера */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Более мягкая тень */
+    max-width: 600px; /* Еще немного уменьшена максимальная ширина */
+    margin: 40px auto; /* Увеличены верхний и нижний отступы для акцента */
+}
+
+.add-product-container h1 {
+    color: #343a40; /* Темно-серый заголовок */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    font-weight: 500; /* Более тонкий шрифт заголовка */
+}
+
+.add-product-form .form-group {
+    margin-bottom: 16px; /* Еще немного уменьшен отступ между полями */
+}
+
+.add-product-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #495057;
+    font-weight: 500; /* Более тонкий шрифт метки */
+    font-size: 1em;
+}
+
+.add-product-form .form-group input[type="text"],
+.add-product-form .form-group input[type="number"],
+.add-product-form .form-group select,
+.add-product-form .form-group textarea,
+.add-product-form .form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Светло-серая граница */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.add-product-form .form-group textarea {
+    min-height: 100px; /* Еще немного уменьшена высота текстовой области */
+}
+
+.add-product-form .form-check {
+    margin-bottom: 14px;
+    padding-left: 1.25em;
+    display: flex;
+    align-items: center;
+}
+
+.add-product-form .form-check input[type="checkbox"] {
+    margin-right: 0.5em;
+    width: auto;
+    height: 1em;
+}
+
+.add-product-form .form-check label {
+    color: #495057;
+    font-size: 1em;
+}
+
+.add-product-form .form-text {
+    margin-top: 4px;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.add-product-form .error-message {
+    margin-top: 4px;
+    font-size: 0.9em;
+    color: #dc3545;
+}
+
+.add-product-form button[type="submit"] {
+    background-color: #007bff; /* Более яркий цвет кнопки */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Небольшая тень для кнопки */
+}
+
+.add-product-form button[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Усиление тени при наведении */
+}

@@ -1,0 +1,64 @@
+{% extends 'setting/base.html' %}
+{% load static %}
+
+{% block title %}Добавить новый товар{% endblock %}
+
+{% block content %}
+<div class="add-product-container">
+    <h1>Добавить новый товар</h1>
+    <form method="post" enctype="multipart/form-data" class="add-product-form">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="{{ form.name.id_for_label }}">Название:</label>
+            {{ form.name }}
+            {% if form.name.errors %}
+                <div class="error-message">{{ form.name.errors }}</div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.image.id_for_label }}">Изображение:</label>
+            {{ form.image }}
+            {% if form.image.errors %}
+                <div class="error-message">{{ form.image.errors }}</div>
+            {% endif %}
+            <small class="form-text text-muted">Выберите изображение товара.</small>
+        </div>
+        <div class="form-group">
+            <label for="{{ form.description.id_for_label }}">Описание:</label>
+            {{ form.description }}
+            {% if form.description.errors %}
+                <div class="error-message">{{ form.description.errors }}</div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.price.id_for_label }}">Цена:</label>
+            {{ form.price }}
+            {% if form.price.errors %}
+                <div class="error-message">{{ form.price.errors }}</div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.genre.id_for_label }}">Жанр:</label>
+            {{ form.genre }}
+            {% if form.genre.errors %}
+                <div class="error-message">{{ form.genre.errors }}</div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.format.id_for_label }}">Формат:</label>
+            {{ form.format }}
+            {% if form.format.errors %}
+                <div class="error-message">{{ form.format.errors }}</div>
+            {% endif %}
+        </div>
+        <div class="form-check">
+            {{ form.is_original }}
+            <label class="form-check-label" for="{{ form.is_original.id_for_label }}">Оригинал</label>
+            {% if form.is_original.errors %}
+                <div class="error-message">{{ form.is_original.errors }}</div>
+            {% endif %}
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить товар</button>
+    </form>
+</div>
+{% endblock %}

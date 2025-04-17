@@ -1,0 +1,33 @@
+{% extends 'setting/base.html' %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>Music Marketplace</h1>
+        <h2>Добавленные товары</h2>
+        {% if products %}
+            <ul>
+                {% for product in products %}
+                    <li>{{ product.name }} - {{ product.price }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Пока нет добавленных товаров.</p>
+        {% endif %}
+        <section class="hero-section">
+            <h1>Discover, Buy & Collect Authentic Music</h1>
+            <p>The ultimate marketplace for vinyl, CDs, cassettes, and exclusive merchandise directly from artists and labels.</p>
+            <div class="buttons">
+                <button class="btn btn-purple">Browse Catalog</button>
+                <button class="btn btn-white">Login or Sign Up</button>
+            </div>
+        </section>
+        <section class="release-section">
+            <h2>New Releases</h2>
+            <div class="cards">
+                <p>Скоро здесь появятся новые релизы.</p>
+            </div>
+            <button class="btn btn-purple view-all">View All →</button>
+        </section>
+    </div>
+{% endblock %}
+

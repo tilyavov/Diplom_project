@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import UserProfile, Product, Order, Payment
+from .models import Product
 
-# Регистрация моделей в админке
-admin.site.register(UserProfile)
-admin.site.register(Product)
-admin.site.register(Order)
-admin.site.register(Payment)
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'genre', 'seller')
+    search_fields = ('name', 'genre')
+    list_filter = ('genre', 'seller_type')

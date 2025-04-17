@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<h1>Добро пожаловать в музыкальный магазин!</h1>
+<h2>Каталог товаров:</h2>
+<ul>
+    {% for product in products %}
+        <li>
+            <a href="{% url 'product_detail' product.id %}">
+                {{ product.name }} ({{ product.genre }})
+            </a>
+            - {{ product.price }} руб.
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
